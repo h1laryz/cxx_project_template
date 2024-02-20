@@ -1,0 +1,18 @@
+Checks: >
+  bugprone-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-pro-type-reinterpret-cast,
+  -cppcoreguidelines-pro-type-vararg,
+  -modernize-use-trailing-return-type,
+  readability-magic-numbers,
+  google-runtime-int,
+  misc-*,
+  clang-analyzer-*,
+
+WarningsAsErrors: '*'
+HeaderFilterRegex: 'a^'
+FormatStyle: file

@@ -1,0 +1,7 @@
+build_debug/
+build_release/
+build/
+Build/
+cmake-build-debug/
+third_party/
+external/

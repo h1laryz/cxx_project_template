@@ -1,0 +1,10 @@
+*[B, b]uild*/
+.vscode/
+.idea/
+.vs/
+out/
+.cache/
+
+Makefile.local
+compile_commands.json
+CMakeUserPresets.json

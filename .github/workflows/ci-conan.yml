@@ -1,0 +1,31 @@
+name: ubuntu 22.04 / clang-format / clang-tidy / conan
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Install dependencies
+      run: |
+        ./scripts/env/ubuntu.sh
+
+    - name: Setup Conan
+      run: |
+        pip install conan
+        make conan-setup
+
+    - name: Check code formatting with clang-format
+      run: make format
+
+    - name: Run clang-tidy linting
+      run: make lint
+
+    - name: Build project (Debug)
+      run: make build-debug
+
+    - name: Run tests (Debug)
+      run: make test-debug
